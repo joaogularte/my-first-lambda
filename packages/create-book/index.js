@@ -10,7 +10,7 @@ exports.handler = async (event) => {
     }   
     
     const connection = await MongoClient.connect(MongoURI, { useNewUrlParser: true, poolSize:10, useUnifiedTopology: true } )
-    const db = connection.db('backend-user-dev');
+    const db = connection.db('first-lambda');
     const colletion = db.collection('books');
 
 
