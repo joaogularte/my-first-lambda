@@ -1,13 +1,13 @@
 const { MongoClient } =  require('mongodb');
-const MongoURI = process.env.MONGO_URI;
+const MongoURI = process.env.MONGO_URL;
 
 exports.handler = async (event) => {
     const {name, description, author} = JSON.parse(event.body);
-    
+
     if(!name || !description || !author) return {
         statusCode: 400, 
         body: JSON.stringify({message: 'Insufficient attributes'})
-    }   
+    }
     
     const connection = await MongoClient.connect(MongoURI, { useNewUrlParser: true, poolSize:10, useUnifiedTopology: true } )
     const db = connection.db('first-lambda');
