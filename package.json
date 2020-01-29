@@ -4,6 +4,7 @@
   "scripts": {
     "clean": "lerna clean -y",
     "bootstrap:test": "lerna bootstrap",
+    "bootstrap:prod": "lerna bootstrap -- --production --no-optional",
     "test": "lerna run test"
   },
   "devDependencies": {
