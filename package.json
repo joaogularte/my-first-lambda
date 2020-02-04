@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "clean": "lerna clean -y",
-    "bootstrap:test": "lerna bootstrap",
+    "bootstrap:test": "lerna bootstrap --hoist",
     "bootstrap:prod": "lerna bootstrap -- --production --no-optional",
     "test": "lerna run test"
   },
